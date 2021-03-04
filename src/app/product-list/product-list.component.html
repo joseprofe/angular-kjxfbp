@@ -1,8 +1,17 @@
-<h2>Products</h2>
+<h2>Productos</h2>
 
-
-<!-- 
-Copyright Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at https://angular.io/license
--->
+<div *ngFor="let pollo of products">
+  <h3>
+    <a [title]="pollo.name + ' details'">
+      {{ pollo.name }}
+    </a>
+  </h3>
+  <p *ngIf="pollo.description">
+    Description: {{ pollo.description }}
+  </p>
+  <button (click)="share()">
+    Share
+  </button>
+  <app-product-alerts [product]="pollo" (polleteDeLaVentana)="onPollete()">
+  </app-product-alerts>
+</div>

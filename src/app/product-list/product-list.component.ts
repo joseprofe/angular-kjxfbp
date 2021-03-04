@@ -1,20 +1,23 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { products } from '../products';
+import { products } from "../products";
 
 @Component({
-  selector: 'app-product-list',
-  templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.css']
+  selector: "app-product-list",
+  templateUrl: "./product-list.component.html",
+  styleUrls: ["./product-list.component.css"]
 })
 export class ProductListComponent {
   products = products;
+  nombre = "pepe";
 
   share() {
-    window.alert('The product has been shared!');
+    window.alert("The product has been shared!");
+  }
+  onPollete() {
+    window.alert("You will be notified when the product goes on sale");
   }
 }
-
 
 /*
 Copyright Google LLC. All Rights Reserved.
